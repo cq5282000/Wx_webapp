@@ -1,0 +1,45 @@
+{
+    "extends": "eslint-config-yayajing",
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "rules": {
+      "indent": [
+        "error",
+        4,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "semi": ["error", "always"],
+      "no-prototype-builtins": ["off"],
+      "arrow-body-style": ["off"],
+      "class-methods-use-this":["off"],
+      "arrow-parens": ["error", "always"],
+      "max-len": ["off"],
+      "max-lines": ["off"],
+      "max-statements": ["off"],
+      "no-console": ["off"],
+      "no-plusplus": ["off"],
+      "no-unused-vars": ["off"],
+      "no-return-await": ["off"],
+      "no-script-url": ["off"],
+      "global-require": ["off"],
+      "space-before-function-paren": [
+        "error",
+        {
+          "anonymous": "never",
+          "named": "never",
+          "asyncArrow": "never"
+        }
+      ],
+      "eol-last": "off"
+    },
+    "env": {
+      "browser": true
+    },
+    "parser": "babel-eslint",
+    "globals": {
+      "require": true
+    }
+}

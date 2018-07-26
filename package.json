@@ -1,0 +1,23 @@
+{
+  "name": "wx_webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cq5282000/Wx_webapp.git"
+  },
+  "author": "chenqu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cq5282000/Wx_webapp/issues"
+  },
+  "homepage": "https://github.com/cq5282000/Wx_webapp#readme",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
+}

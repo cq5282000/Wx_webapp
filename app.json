@@ -1,0 +1,28 @@
+{
+  "pages":[
+    "pages/test/test",
+    "pages/index/index",
+    "pages/test2/test2"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "text": "测试"
+      }
+    ],
+    "position": "bottom",
+    "selectedColor": "#1aad19"
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#000000"
+  }
+}
