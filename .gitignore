@@ -2,4 +2,5 @@ dist
 .idea
 package-lock.json
 .vscode/
-yarn.lock
+node_modules
+# yarn.lock
