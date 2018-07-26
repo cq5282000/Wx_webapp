@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/cq5282000/Wx_webapp#readme",
   "dependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.2.0",
     "gulp": "^3.9.1"
   }
 }

@@ -1,5 +1,5 @@
 {
-    "extends": "eslint-config-yayajing",
+    "extends": "eslint:recommended",
     "parserOptions": {
         "ecmaVersion": 6
     },

@@ -15,8 +15,8 @@ insert_final_newline = true
 # 会除去换行行首的任意空白字符
 trim_trailing_whitespace = true
 # 对于所有的JS文件，设置缩进
-[*.{js.html}]
-indent_style = tab
+[*.{js,html,wxss,html}]
+indent_style = space
 indent_size = 4
 # json文件缩进设置为2
 [*.{json,md}]
