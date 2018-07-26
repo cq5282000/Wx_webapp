@@ -1,5 +1,4 @@
 dist
-node-modules
 .idea
 package-lock.json
 .vscode/
