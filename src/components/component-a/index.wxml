@@ -1,4 +1,3 @@
 <view class="component" bindtap="onTap">
-    1231231xs
     <slot name="before"></slot>
 </view>

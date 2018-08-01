@@ -1,13 +1,13 @@
 <view class="container">
     <text>{{test}}</text>
-    <button 
-        size="default|mini" 
-        type="default|primary|warn" 
-        plain="{{false}}" 
-        disabled="{{false}}" 
-        loading="{{false}}" 
-        form-type="submit|reset" 
-        hover-class="button-hover" 
+    <button
+        size="default|mini"
+        type="default|primary|warn"
+        plain="{{false}}"
+        disabled="{{false}}"
+        loading="{{false}}"
+        form-type="submit|reset"
+        hover-class="button-hover"
         open-type="share"
     >
         测试
@@ -17,20 +17,20 @@
         <view>{{item}}</view>
     </view>
     <component-a bindmyevent="onMyEvent"><view slot="before">slot</view></component-a>
-    <open-data 
+    <open-data
     type="groupName"
     open-gid="tG_H4n47PthXLlmLEQCGKFuoArW6Y"></open-data>
     <open-data type="userGender" lang="zh_CN"></open-data>
-    <button 
-        size="default|mini" 
-        type="default|primary|warn" 
-        plain="{{false}}" 
-        disabled="{{false}}" 
-        loading="{{false}}" 
-        form-type="submit|reset" 
-        hover-class="button-hover" 
+    <button
+        size="default|mini"
+        type="default|primary|warn"
+        plain="{{false}}"
+        disabled="{{false}}"
+        loading="{{false}}"
+        form-type="submit|reset"
+        hover-class="button-hover"
         bindtap="onChooseImage"
     >
-        上传图片
+        上传图片111
     </button>
 </view>
