@@ -8,7 +8,8 @@ const htmlminify = require('gulp-htmlmin');
 const less = require('gulp-less');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
-const isProduction = gulp.env.NODE_ENV === 'production' ? true : false;
+const pump = require('pump');
+const isProduction = gulp.env.NODE_ENV === 'production';
 /**
  *
  * @param {删除文件夹} filePath
@@ -49,7 +50,8 @@ gulp.task('clean', () => {
 /**
  * copy文件
  */
-gulp.task('copy', (callback) => {
+gulp.task('copy', () => {
+    console.log('====================>');
     // gulp.src(['src/**/**/*.?(json|js|wxml|wxss)'])
     //     .pipe(gulp.dest('dist'));
     // runSequence('copy:components', 'copy:pages', 'copy:app', callback);
@@ -89,7 +91,7 @@ gulp.task('copy:app', () => {
 gulp.task('compile:json', () => {
     gulp.src(['src/**/**/*.json'])
         .pipe(cache('compile:json'))
-        .pipe(gulpif(isProduction, jsonminify))
+        .pipe(gulpif(isProduction, jsonminify()))
         .pipe(gulp.dest('dist'));
 });
 
@@ -130,11 +132,18 @@ gulp.task('compile:css', () => {
  * compile:js
  */
 
-gulp.task('compile:js', () => {
-    gulp.src(['src/**/**/*.js'])
-        .pipe(gulpif(isProduction, uglify))
-        .pipe('dist');
-
+gulp.task('compile:js', (next) => {
+    // gulp.src(['src/**/**/*.js'])
+    //     .pipe(gulpif(isProduction, uglify()))
+    //     .pipe(gulp.dest('dist'))
+    //     .on('error', function(err) {
+    //         console.error('Error in compress task', err.toString());
+    //     });
+    pump([
+        gulp.src('src/**/**/*.js'),
+        uglify(),
+        gulp.dest('dist')
+    ],next);
 });
 
 /**
@@ -146,7 +155,7 @@ gulp.task('compile:js', () => {
  */
 
 gulp.task('compile', (next) => {
-    return runSequence(['compile:json', 'compile: html', 'compile:css', 'compile:js'], next);
+    return runSequence(['compile:json', 'compile:html', 'compile:css', 'compile:js'], next);
 });
 
 /**

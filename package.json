@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp build --NODE_ENV development"
+    "build": "gulp build --NODE_ENV production"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,8 @@
     "gulp-less": "^4.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-uglify": "^3.0.1",
-    "run-sequence": "^2.2.1"
+    "pump": "^3.0.0",
+    "run-sequence": "^2.2.1",
+    "uglify-js": "^3.4.6"
   }
 }

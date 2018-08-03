@@ -31,6 +31,6 @@
         hover-class="button-hover"
         bindtap="onChooseImage"
     >
-        上传图片111
+        上传图片
     </button>
 </view>
