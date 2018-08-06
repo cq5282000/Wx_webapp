@@ -195,20 +195,16 @@ gulp.task('watch', () => {
 
 gulp.task('addNewPage', () => {
     const questionArr = [{
-        question: '请输入你要设置的问题1: ',
-        value: 'pageName',
-    }, {
-        question: '请输入你要设置的问题2: ',
+        question: '请输入要创建的页面的名称: ',
         value: 'pageName',
     }];
     const answerObj = {
-        pageName1: '',
-        pageName2: ''
+        pageName: ''
     };
     process.nextTick(
         () => {
             addNew(questionArr, answerObj, function(answerObj) {
-                console.log('========>', answerObj);
+
             });
         }
     );
