@@ -230,7 +230,7 @@ gulp.task('addNewComponent', () => {
         () => {
             addNew(questionArr, answerObj, function(answerObj) {
                 gulp.src('template/component/*.{html,js,json,less}')
-                    .pipe(gulp.dest(`src/pages/${answerObj.componentName}`));
+                    .pipe(gulp.dest(`src/components/${answerObj.componentName}`));
             });
         }
     );
