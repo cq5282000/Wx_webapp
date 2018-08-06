@@ -3,7 +3,7 @@
 ### 基础指令
 
 ```bash
-npm run build
+npm run build // 编译
 ```
 
 ```bash
@@ -11,7 +11,7 @@ npm run addPage // 添加新界面
 ```
 
 ```bash
-npm run addComponent
+npm run addComponent // 添加新组件
 ```
 
 
