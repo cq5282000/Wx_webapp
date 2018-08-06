@@ -2,17 +2,17 @@
 
 ### 基础指令
 
-```
-npm run build // 编译
 ```bash
-
+npm run build
 ```
+
+```bash
 npm run addPage // 添加新界面
-```bash
-
 ```
-npm run addComponent
+
 ```bash
+npm run addComponent
+```
 
 
 ### eslint
