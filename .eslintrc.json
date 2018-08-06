@@ -36,7 +36,11 @@
       "eol-last": "off"
     },
     "env": {
-      "browser": true
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "jquery": true,
+      "node": true
     },
     "parser": "babel-eslint",
     "globals": {

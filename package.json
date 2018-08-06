@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp build --env production && gulp watch"
+    "build": "gulp build --env production && gulp watch",
+    "addPage": "gulp addNewPage",
+    "addComponents": "node addNew"
   },
   "repository": {
     "type": "git",

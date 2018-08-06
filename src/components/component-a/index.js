@@ -1,4 +1,4 @@
-Component({
+Component({ // eslint-disable-line
     options: {
         multipleSlots: true,
     },

@@ -11,12 +11,14 @@ const uglify = require('gulp-uglify');
 const babel = require('gulp-babel');
 const combiner = require('stream-combiner2');
 const minimist = require('minimist');
-var changed = require('gulp-changed');
+const changed = require('gulp-changed');
+const addNew = require('./addNew');
+
 const knownOptions = {
     string: 'env',
-    default: { env: process.env.NODE_ENV || 'production' }      // eslint-disable-line
+    default: { env: process.env.NODE_ENV || 'production' }
 };
-const options = minimist(process.argv.slice(2), knownOptions);  // eslint-disable-line
+const options = minimist(process.argv.slice(2), knownOptions);
 const isProduction = options.env === 'production';
 /**
  *
@@ -185,4 +187,29 @@ gulp.task('watch', () => {
     gulp.watch('src/**/*.json', ['compile:json']);
     gulp.watch('src/**/*.{wxml,html}', ['compile:html']);
     gulp.watch('src/**/*.{wxss,less}', ['compile:css']);
+});
+
+/**
+ * 添加新界面
+ */
+
+gulp.task('addNewPage', () => {
+    const questionArr = [{
+        question: '请输入你要设置的问题1: ',
+        value: 'pageName',
+    }, {
+        question: '请输入你要设置的问题2: ',
+        value: 'pageName',
+    }];
+    const answerObj = {
+        pageName1: '',
+        pageName2: ''
+    };
+    process.nextTick(
+        () => {
+            addNew(questionArr, answerObj, function(answerObj) {
+                console.log('========>', answerObj);
+            });
+        }
+    );
 });
