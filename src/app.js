@@ -18,7 +18,7 @@ App({ // eslint-disable-line
         wx.login({// eslint-disable-line
             success: (res) => {
                 // 发送 res.code 到后台换取 openId, sessionKey, unionId
-                console.log('2121231', JSON.stringify(res));
+                console.log('2a', JSON.stringify(res));
                 this.globalData.code = res.code;
             }
         });

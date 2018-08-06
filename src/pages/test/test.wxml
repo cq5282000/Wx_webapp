@@ -10,7 +10,7 @@
         hover-class="button-hover"
         open-type="share"
     >
-        测试
+        测试1111
     </button>
     <view wx:if="{{condition}}">123123213</view>
     <view wx:for="{{array}}" wx:key="unique">
