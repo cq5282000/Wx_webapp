@@ -204,7 +204,33 @@ gulp.task('addNewPage', () => {
     process.nextTick(
         () => {
             addNew(questionArr, answerObj, function(answerObj) {
+                gulp.src('template/page/*.{html,js,json,less}')
+                    .pipe(rename({
+                        basename: answerObj.pageName,
+                    }))
+                    .pipe(gulp.dest(`src/pages/${answerObj.pageName}`));
+            });
+        }
+    );
+});
 
+/**
+ * 添加新的组建
+ */
+
+gulp.task('addNewComponent', () => {
+    const questionArr = [{
+        question: '请输入要创建的组建的名称: ',
+        value: 'componentName'
+    }];
+    const answerObj = {
+        componentName: ''
+    };
+    process.nextTick(
+        () => {
+            addNew(questionArr, answerObj, function(answerObj) {
+                gulp.src('template/component/*.{html,js,json,less}')
+                    .pipe(gulp.dest(`src/pages/${answerObj.componentName}`));
             });
         }
     );
